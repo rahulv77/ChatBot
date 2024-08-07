@@ -195,7 +195,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: cursive;
+  font-family: auto;
   /* 1 */
   font-feature-settings: inherit;
   /* 1 */
