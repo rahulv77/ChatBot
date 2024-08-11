@@ -1,7 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-// import md from "markdown-it"; // It is no longer being used in the code
 
-// Initialize the model
 const genAI = new GoogleGenerativeAI(`${import.meta.env.VITE_API_KEY}`);
 
 const model = genAI.getGenerativeModel({ model: "gemini-pro" });
@@ -50,12 +48,11 @@ export const aiDiv = (data) => {
             />
           </div>
   `;
-  // I changed the pre tag to a regular p tag
+
 };
 
 let loadInterval;
 
-// AI thinking about a statement (3 dots loading at an interval of 300 milliseconds)
 function loader(item) {
   item.textContent = "";
 
@@ -68,7 +65,7 @@ function loader(item) {
   }, 300);
 }
 
-// Text stream function that writes a single charater every 20 milliseconds
+
 function streamText(item, text) {
   let index = 0;
   let interval = setInterval(() => {
@@ -97,7 +94,6 @@ async function handleSubmit(event) {
   chatArea.innerHTML += userDiv(prompt);
   userMessage.value = "";
 
-  // Create a new div for the AI response and add it to the chat area
   const aiResponseDiv = document.createElement("div");
   aiResponseDiv.innerHTML = `
   <!-- AI Chat -->
@@ -113,16 +109,15 @@ async function handleSubmit(event) {
 `;
   chatArea.appendChild(aiResponseDiv);
 
-  // Pass the p tag to the loader function
   const pTag = aiResponseDiv.querySelector("p");
   loader(pTag);
 
   const aiResponse = await getResponse(prompt);
   if (aiResponse !== null) {
-    // let md_text = md().render(aiResponse); //I removed the markdown rendering because I don't really like how it looks
-    clearInterval(loadInterval); // Stop the loading function
+  
+    clearInterval(loadInterval);
     pTag.innerText = "";
-    // aiResponseDiv.innerHTML = aiDiv(md_text);
+    
     streamText(pTag, aiResponse);
 
     let newUserRole = {
