@@ -664,7 +664,7 @@ video {
 }
 
 .bg-gemSend:hover {
-  background: linear-gradient(to right, #8d008f, #2e7091, #8d008f); /* Change the color here */
+  background: linear-gradient(to right, #8d008f, #2e7091, #8d008f);
 }
 
 .bg-gemText{
