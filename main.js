@@ -62,7 +62,7 @@ function loader(item) {
     if (item.textContent === "....") {
       item.textContent = "";
     }
-  }, 300);
+  }, 200);
 }
 
 

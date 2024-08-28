@@ -648,23 +648,37 @@ video {
 }
 
 .bg-gemRegular {
-  background: linear-gradient(to right, rgb(97 0 75), rgb(125 18 27))
+  background: #371838
 }
 
 .bg-gemDeep {
-  background: linear-gradient(to right, #345e73 30%, #008b31)
+  background: #7d21bc;
+  font-family: "Junge", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .bg-gemRegular\/40 {
-  background: linear-gradient(to right, #68389a  20%, #8b2642);
+  background: #bc2193;
+  font-family: "Junge", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .bg-gemSend {
-  background: linear-gradient(to right, #2e7091, #8d008f, #2e7091);
+  background: #7d21bc
+}
+ 
+.bg-gemSend:hover {
+  background: #bc2193
 }
 
-.bg-gemSend:hover {
-  background: linear-gradient(to right, #8d008f, #2e7091, #8d008f);
+.bg-main{
+  background: #211224
+}
+
+.bg-textarea{
+  background: #3b233c
 }
 
 .bg-gemText{
@@ -690,17 +704,9 @@ video {
 }
 
 .text-lg {
-  font-size: 1.825rem;
-  line-height: 1.75rem;
-  font-family: cursive;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.font-medium {
-  font-weight: 500;
+  font-size: 1.425rem;
+  line-height: 1.45rem;
+  font-weight: bold;
 }
 
 .text-blue-600 {
